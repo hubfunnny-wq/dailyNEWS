@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daily Pulse | Premium Daily News & Aggregator</title>
+    <title>AI Pulse | Artificial Intelligence Ideas, Trends & Innovation Hub</title>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="styles.css">
@@ -19,40 +19,54 @@
         <aside class="sidebar">
             <div class="sidebar-header">
                 <div class="logo">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="logo-icon"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
-                    <span>Daily Pulse</span>
+                    <svg class="logo-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-1.12-2.5-2.5-2.5S6 10.62 6 12a2.5 2.5 0 0 0 2.5 2.5z"></path>
+                        <path d="M15.5 14.5A2.5 2.5 0 0 0 18 12c0-1.38-1.12-2.5-2.5-2.5S13 10.62 13 12a2.5 2.5 0 0 0 2.5 2.5z"></path>
+                        <path d="M12 6v2"></path><path d="M12 16v2"></path>
+                    </svg>
+                    <span class="logo-text">AI Pulse</span>
+                    <span class="logo-tag">HUB</span>
                 </div>
             </div>
             
-            <!-- Weather Widget -->
+            <!-- Weather & Tech Status Widget -->
             <div class="weather-widget" id="weatherWidget">
                 <div class="weather-loading">
                     <div class="spinner"></div>
-                    <span>Loading weather...</span>
+                    <span>Initializing AI radar...</span>
                 </div>
             </div>
             
             <nav class="sidebar-nav">
-                <div class="nav-section-title">Feeds</div>
-                <button class="nav-item active" data-tab="all">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"></rect><rect x="14" y="3" width="7" height="5"></rect><rect x="14" y="12" width="7" height="9"></rect><rect x="3" y="16" width="7" height="5"></rect></svg>
-                    <span>All Feeds</span>
+                <div class="nav-section-title">Explore Hub</div>
+                <button class="nav-item active" data-tab="ideas">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    <span>AI Idea Generator</span>
+                    <span class="pulse-badge">NEW</span>
+                </button>
+                <button class="nav-item" data-tab="news">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"></path><path d="M18 14h-8"></path><path d="M15 18h-5"></path><path d="M10 6h8v4h-8V6Z"></path></svg>
+                    <span>AI News & Trends</span>
+                </button>
+                <button class="nav-item" data-tab="radar">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a10 10 0 0 1 10 10"></path><path d="M12 12 19 5"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                    <span>AI Models Radar</span>
                 </button>
                 <button class="nav-item" data-tab="bookmarks">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
-                    <span>Saved Articles</span>
+                    <span>Saved Vault</span>
                     <span class="badge" id="bookmarkCount">0</span>
                 </button>
                 
                 <div class="nav-section-header">
-                    <span class="nav-section-title">Custom Feeds</span>
+                    <span class="nav-section-title">Custom AI Feeds</span>
                     <button class="add-feed-btn" id="openAddFeedModal" title="Add Custom RSS Feed">
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
                     </button>
                 </div>
                 <div class="custom-feeds-list" id="customFeedsList">
-                    <!-- Custom feeds will be loaded here -->
-                    <div class="no-feeds-msg">No custom feeds added yet.</div>
+                    <div class="no-feeds-msg">No custom AI feeds added yet.</div>
                 </div>
             </nav>
 
@@ -60,7 +74,7 @@
                 <button class="theme-toggle" id="themeToggleBtn" aria-label="Toggle Theme">
                     <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
                     <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-                    <span id="themeToggleText">Light Mode</span>
+                    <span id="themeToggleText">Cyber Mode</span>
                 </button>
             </div>
         </aside>
@@ -70,13 +84,13 @@
             <!-- Header section -->
             <header class="app-header">
                 <div class="greeting-section">
-                    <h1 id="greeting">Good Morning</h1>
-                    <p class="current-date" id="currentDate">Monday, July 13, 2026</p>
+                    <h1 id="greeting">AI Innovation Hub</h1>
+                    <p class="current-date" id="currentDate">Exploring Next-Gen Artificial Intelligence & Startup Concepts</p>
                 </div>
                 <div class="search-section">
                     <div class="search-bar">
                         <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                        <input type="text" id="searchInput" placeholder="Search news stories...">
+                        <input type="text" id="searchInput" placeholder="Search AI startup ideas, LLM models, prompts...">
                         <button class="clear-search-btn" id="clearSearchBtn" aria-label="Clear Search">
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
                         </button>
@@ -84,44 +98,101 @@
                 </div>
             </header>
 
-            <!-- Inspirational Quote Section -->
+            <!-- AI Prompt & Wisdom Card -->
             <div class="quote-card" id="quoteCard">
                 <div class="quote-content">
-                    <p class="quote-text" id="quoteText">"Loading your daily dose of inspiration..."</p>
-                    <p class="quote-author" id="quoteAuthor">- Daily Pulse</p>
+                    <div class="ai-pill">AI PROMPT & INSIGHT OF THE DAY</div>
+                    <p class="quote-text" id="quoteText">"Build a multi-agent autonomous system that continuously audits codebases for security vulnerabilities using localized RAG pipelines."</p>
+                    <p class="quote-author" id="quoteAuthor">- AI Pulse Research</p>
                 </div>
-                <button class="close-quote-btn" id="closeQuoteBtn" title="Hide Quote">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-                </button>
+                <div class="quote-actions">
+                    <button class="copy-prompt-btn" id="copyPromptBtn" title="Copy Prompt">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                        <span id="copyPromptText">Copy Prompt</span>
+                    </button>
+                    <button class="close-quote-btn" id="closeQuoteBtn" title="Hide Insight">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                    </button>
+                </div>
             </div>
 
-            <!-- Categories and Filter Section -->
-            <section class="filters-section">
-                <div class="categories-tabs" id="categoriesTabs">
-                    <button class="category-chip active" data-category="all">General</button>
-                    <button class="category-chip" data-category="technology">Technology</button>
-                    <button class="category-chip" data-category="science">Science</button>
-                    <button class="category-chip" data-category="sports">Sports</button>
-                </div>
-                <div class="feed-status" id="feedStatus">
-                    <span class="refresh-indicator"></span>
-                    <button class="refresh-btn" id="refreshBtn">
-                        <svg class="refresh-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 4v6h-6"></path><path d="M1 20v-6h6"></path><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
-                        <span>Sync</span>
+            <!-- Main Interactive Section: AI Idea Generator Sandbox -->
+            <section class="section-container" id="ideaGeneratorSection">
+                <div class="section-header">
+                    <div class="section-title-wrap">
+                        <h2>AI Startup & Project Idea Forge</h2>
+                        <p>Generate actionable, high-feasibility AI business concepts, developer projects, and agent workflows.</p>
+                    </div>
+                    <button class="btn btn-primary generate-idea-btn" id="generateRandomIdeaBtn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <span>Surprise Me with AI Idea</span>
                     </button>
+                </div>
+
+                <div class="filters-section">
+                    <div class="categories-tabs" id="ideaCategoriesTabs">
+                        <button class="category-chip active" data-idea-cat="all">All Domains</button>
+                        <button class="category-chip" data-idea-cat="enterprise">Enterprise Automation</button>
+                        <button class="category-chip" data-idea-cat="coding">Developer Tools</button>
+                        <button class="category-chip" data-idea-cat="healthcare">Healthcare & Bio</button>
+                        <button class="category-chip" data-idea-cat="creative">Creative & Design</button>
+                        <button class="category-chip" data-idea-cat="education">Education & Research</button>
+                    </div>
+                </div>
+
+                <div class="ideas-grid" id="ideasGrid">
+                    <!-- AI Idea Cards Injected Here -->
                 </div>
             </section>
 
-            <!-- News Grid -->
-            <div class="news-container">
-                <div class="news-grid" id="newsGrid">
-                    <!-- Skeleton screens will be generated here -->
+            <!-- News & Breakthrough Feeds Section -->
+            <section class="section-container" id="newsSection" style="display: none;">
+                <div class="section-header">
+                    <div class="section-title-wrap">
+                        <h2>AI News & Research Breakthroughs</h2>
+                        <p>Live RSS aggregated from MIT Tech Review AI, TechCrunch AI, Wired, and Science Daily.</p>
+                    </div>
+                    <div class="feed-status" id="feedStatus">
+                        <span class="refresh-indicator"></span>
+                        <button class="refresh-btn" id="refreshBtn">
+                            <svg class="refresh-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 4v6h-6"></path><path d="M1 20v-6h6"></path><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
+                            <span>Sync RSS</span>
+                        </button>
+                    </div>
                 </div>
-            </div>
+
+                <div class="filters-section">
+                    <div class="categories-tabs" id="newsCategoriesTabs">
+                        <button class="category-chip active" data-news-cat="all">All AI Feeds</button>
+                        <button class="category-chip" data-news-cat="technology">Generative AI & LLMs</button>
+                        <button class="category-chip" data-news-cat="science">AI Research & Bio</button>
+                        <button class="category-chip" data-news-cat="sports">Robotics & Hardware</button>
+                    </div>
+                </div>
+
+                <div class="news-container">
+                    <div class="news-grid" id="newsGrid">
+                        <!-- News cards injected here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- AI Models & Tools Radar Section -->
+            <section class="section-container" id="radarSection" style="display: none;">
+                <div class="section-header">
+                    <div class="section-title-wrap">
+                        <h2>AI Models & Framework Radar</h2>
+                        <p>Curated list of state-of-the-art open-source LLMs, agent frameworks, and developer tools.</p>
+                    </div>
+                </div>
+                <div class="radar-grid" id="radarGrid">
+                    <!-- Model Radar Injected Here -->
+                </div>
+            </section>
         </main>
     </div>
 
-    <!-- Reader Drawer/Overlay -->
+    <!-- Reader Drawer/Overlay for News Articles -->
     <div class="reader-overlay" id="readerOverlay">
         <div class="reader-drawer">
             <button class="close-drawer-btn" id="closeDrawerBtn" aria-label="Close Reader">
@@ -133,39 +204,38 @@
         </div>
     </div>
 
-    <!-- Add Custom Feed Modal -->
+    <!-- Add Custom RSS Feed Modal -->
     <div class="modal-overlay" id="addFeedModal">
         <div class="modal-card">
             <div class="modal-header">
-                <h2>Add Custom RSS Feed</h2>
+                <h2>Add Custom AI RSS Feed</h2>
                 <button class="close-modal-btn" id="closeFeedModalBtn">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
                 </button>
             </div>
             <form id="addFeedForm" class="modal-form">
                 <div class="form-group">
-                    <label for="feedName">Feed Name</label>
-                    <input type="text" id="feedName" placeholder="e.g. Wired Science, Hacker News" required autocomplete="off">
+                    <label for="feedName">AI Source Name</label>
+                    <input type="text" id="feedName" placeholder="e.g. OpenAI Blog, HuggingFace Blog" required autocomplete="off">
                 </div>
                 <div class="form-group">
-                    <label for="feedUrl">RSS Feed URL</label>
+                    <label for="feedUrl">RSS Feed XML URL</label>
                     <input type="url" id="feedUrl" placeholder="https://example.com/feed.xml" required autocomplete="off">
-                    <span class="help-text">Must be a valid XML RSS feed URL. We will test it before adding.</span>
+                    <span class="help-text">Must be a valid XML RSS feed. Verified before saving.</span>
                 </div>
                 <div class="form-group">
-                    <label for="feedCategory">Category Group</label>
+                    <label for="feedCategory">AI Domain</label>
                     <select id="feedCategory">
-                        <option value="general">General</option>
-                        <option value="technology">Technology</option>
-                        <option value="science">Science</option>
-                        <option value="sports">Sports</option>
+                        <option value="technology">Generative AI & LLMs</option>
+                        <option value="science">AI Research & Bio</option>
+                        <option value="general">General AI News</option>
                     </select>
                 </div>
                 <div class="modal-error" id="modalError"></div>
                 <div class="modal-actions">
                     <button type="button" class="btn btn-secondary" id="cancelFeedBtn">Cancel</button>
                     <button type="submit" class="btn btn-primary" id="saveFeedBtn">
-                        <span class="btn-text">Add Feed</span>
+                        <span class="btn-text">Add AI Source</span>
                         <div class="btn-spinner"></div>
                     </button>
                 </div>
